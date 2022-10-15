@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+
+}
+
+main {
+    margin: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.name, .skills {
+    margin-bottom: 1rem;
+}
+
+.heading-primary {
+    margin-bottom: 2rem;
+}
+
+.my-skills,
+.education--summary,
+.summary {
+    margin-top: 1rem;
+}
+
+.myGmail {
+    margin-bottom: 1.5rem;
+}
+
+.mail-portfolio a {
+    line-height: 2;
+}
+
+@media (min-width:730px) {
+
+
+    .skills--experience,
+    .education--summary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20%;
+
+    }
+
+    .skills {
+        margin-bottom: 0;
+    }
+
+    main {
+        display: flex;
+        align-items: baseline;
+        flex-flow: column wrap;
+        justify-content: center;
+
+    }
+
+    .my-experiences, .my-skills,
+    .my-projects, .my-education,
+    .my-summary {
+        margin-bottom: 1rem;
+    }
+
+    .projects {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+}
+
+@media (min-width:900px) {
+    main {
+        display: flex;
+        align-items: baseline;
+        flex-flow: column wrap;
+        justify-content: center;
+        width: 70%;
+        border: 2px solid grey;
+        position: relative;
+        left: 50%;
+        border-radius: 0.5rem;
+        transform: translate(-50%, 10%);
+    }
+
+    .myGmail, .portfolio {
+        margin-right: 2rem;
+    }
+
+    .mail-portfolio {
+        margin-top: 2rem;
+    }
+
+    .my-projects {
+        margin-top: 1rem;
+    }
+}

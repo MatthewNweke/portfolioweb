@@ -1,0 +1,144 @@
+@import url("overlay.css");
+
+body {
+    background-color: rgba(23, 4, 26, 0.95);
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+
+html {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    overflow: hidden;
+}
+
+.about-me {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.name {
+    color: #ff5a00
+}
+
+
+/* text animation section */
+
+@keyframes move-text {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.about-text p {
+    color: #f1f1f1;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    animation: move-text 2s .1s;
+    line-height: 1.5;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.about-text {
+    width: 100vw;
+    margin: 0;
+}
+
+
+#img-1 {
+    width: 17vw;
+    height: 18vw;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.imgcontainer {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#cv-list::after {
+    display: block;
+    height: 2px;
+    background-color: #ff5a00;
+    content: "";
+    width: 100px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+@media (max-width:648px) {
+    #img-1 {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width:448px) {
+
+    .about-text p {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+}
+
+@media (max-width:420px) {
+    #img-1 {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+
+    }
+}
+
+@media (max-width:290px) {
+    .about-text p {
+        font-size: 0.8rem;
+        letter-spacing: 0.2px;
+        line-height: 1.2;
+    }
+}
